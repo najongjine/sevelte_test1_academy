@@ -1,6 +1,11 @@
 <script lang="ts">
-  // 페이지별 스크립트 작성
+  import { counter } from '$lib/stores/counter';
 </script>
 
-<h1>About Page</h1>
-<p>This is the about page.</p>
+<h1>🧮 Persisted Counter</h1>
+
+<p>현재 값: {$counter}</p>
+
+<button on:click={() => $counter++}>+1</button>
+<button on:click={() => $counter--}>-1</button>
+<button on:click={() => $counter = 0}>Reset</button>
